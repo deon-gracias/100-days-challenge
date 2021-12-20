@@ -16,6 +16,7 @@ int main(){
     cout << "Fibonacci Sequence : " << endl;
 
     for (int i = 0; i < n; i++) cout << fib(i) << " ";
+    cout << endl;
 
     return 0;
 }

@@ -12,7 +12,7 @@ int main() {
     cout << "Enter 2 numbers to find the GCD: ";
     cin >> x >> y;
 
-    cout << "GCD of " << x << " and " << y << " = " << gcd(x, y);
+    cout << "GCD of " << x << " and " << y << " = " << gcd(x, y) << endl;
 
     return 0;
 }

@@ -15,7 +15,7 @@ int main() {
     cout << "y = ";
     cin >> y;
 
-    cout << x << " ^ " << y << " = " << power(x, y);
+    cout << x << " ^ " << y << " = " << power(x, y) << endl;
 
     return 0;
 }
