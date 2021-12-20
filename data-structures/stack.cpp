@@ -22,7 +22,7 @@ public:
     }
 
     double pop() {
-        if (underflow()) throw std::overflow_error("Stack Underflow.");
+        if (underflow()) throw std::underflow_error("Stack Underflow.");
         return this->stack[top--];
     }
 
@@ -58,7 +58,7 @@ public:
                         std::cin >> val;
                         this->push(val);
                     } catch (std::overflow_error& e) {
-                        std::cout << "Stack Overflow" << std::endl;
+                        std::cout << e.what() << std::endl;
                     }
                     break;
 
@@ -66,7 +66,7 @@ public:
                     try {
                         std::cout << "Value popped: " << this->pop() << std::endl;
                     } catch (std::underflow_error& e) {
-                        std::cout << "Stack Underflow" << std::endl;
+                        std::cout << e.what() << std::endl;
                     }
                     break;
 
@@ -74,8 +74,7 @@ public:
                     try {
                         std::cout << "Top: " << this->display_top() << std::endl;
                     } catch (std::underflow_error& e) {
-                        std::cout << "Stack Underflow" << std::endl;
-                        return -1;
+                        std::cout << e.what() << std::endl;
                     }
                     break;
 
@@ -84,7 +83,6 @@ public:
                         this->display();
                     } catch (std::underflow_error& e) {
                         std::cout << "Stack Underflow" << std::endl;
-                        return -1;
                     }
                     break;
 
